@@ -1,5 +1,7 @@
 <% @tags.each do |tag| %>
 		<li>
+			<%if logged_in? %>
 			<%= link_to tag.name, tag_path(tag)%>
+			<% end %>
 		</li>
 	<% end %>
